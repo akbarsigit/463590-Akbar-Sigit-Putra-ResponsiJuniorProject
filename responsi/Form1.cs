@@ -37,12 +37,16 @@ namespace responsi
         {
             conn = new NpgsqlConnection(connstring);
             conn.Open();
-            string sql = "select * from st_insert()";
+            string sql = @"select * from st_insertKar(:_nama, :_id_dep)";
             NpgsqlCommand cmd = new NpgsqlCommand(sql, conn);
-            NpgsqlDataReader reader = cmd.ExecuteReader();
-            DataTable dtKaryawan = new DataTable();
-            dtKaryawan.Load(reader);
-            dgvKaryawan.DataSource = dtKaryawan;
+
+            cmd.Parameters.AddWithValue("_name", tbNama );
+            cmd.Parameters.AddWithValue("_id_dep", tbDep);
+
+            if((int) cmd.ExecuteScalar() == 1)
+            {
+                MessageBox.Show("Insert Berhasil")
+            }
         }
 
         private void btnUpdate_Click(object sender, EventArgs e)
