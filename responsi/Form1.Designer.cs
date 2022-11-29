@@ -36,6 +36,7 @@
             this.btnUpdate = new System.Windows.Forms.Button();
             this.Delete = new System.Windows.Forms.Button();
             this.dgvKaryawan = new System.Windows.Forms.DataGridView();
+            this.label3 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvKaryawan)).BeginInit();
             this.SuspendLayout();
             // 
@@ -56,7 +57,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(25, 52);
+            this.label1.Location = new System.Drawing.Point(23, 49);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(85, 13);
             this.label1.TabIndex = 2;
@@ -104,16 +105,27 @@
             // dgvKaryawan
             // 
             this.dgvKaryawan.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvKaryawan.Location = new System.Drawing.Point(31, 162);
+            this.dgvKaryawan.Location = new System.Drawing.Point(26, 166);
             this.dgvKaryawan.Name = "dgvKaryawan";
             this.dgvKaryawan.Size = new System.Drawing.Size(349, 139);
             this.dgvKaryawan.TabIndex = 7;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(117, 9);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(168, 13);
+            this.label3.TabIndex = 8;
+            this.label3.Text = "KARYAWAN MANAGEMENT";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(529, 313);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.dgvKaryawan);
             this.Controls.Add(this.Delete);
             this.Controls.Add(this.btnUpdate);
@@ -140,6 +152,7 @@
         private System.Windows.Forms.Button btnUpdate;
         private System.Windows.Forms.Button Delete;
         private System.Windows.Forms.DataGridView dgvKaryawan;
+        private System.Windows.Forms.Label label3;
     }
 }
 
