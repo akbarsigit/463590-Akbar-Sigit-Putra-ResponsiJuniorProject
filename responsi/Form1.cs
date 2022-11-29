@@ -29,7 +29,7 @@ namespace responsi
             DataTable dtKaryawan = new DataTable();
             dtKaryawan.Load(reader);
             dgvKaryawan.DataSource = dtKaryawan;
-
+            conn.Close()
 
         }
 
@@ -45,8 +45,10 @@ namespace responsi
 
             if((int) cmd.ExecuteScalar() == 1)
             {
-                MessageBox.Show("Insert Berhasil")
+                MessageBox.Show("Insert Berhasil");
+                conn.Close();
             }
+            
         }
 
         private void btnUpdate_Click(object sender, EventArgs e)
